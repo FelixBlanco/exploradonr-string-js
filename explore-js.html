@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var cadena = " esto es un mensaje https://www.anerbarrena.com/detectar-links-cadena-texto-php-382/ text que continua";		
+		var arrayCadena = cadena.split(" ") // separamos en arrays		
+		var newArray = []; // nuevo array
+		for (let i of arrayCadena) { // exploramos el array
+			resul = i.substring(5,0) // buscamos si es http o httpS
+			if(resul == 'http' || resul == 'https'){											
+				newArray.push('<a href="'+ i +'">'+ i +"</a>")								
+			}else{
+				newArray.push(i)				
+			}
+		}
+		console.log( newArray.join(" ") ) // mostramos los valores 
+	</script>
+</body>
+</html>
